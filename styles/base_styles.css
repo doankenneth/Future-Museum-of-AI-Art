@@ -12,65 +12,39 @@ body {
 .nav-header{
     position: fixed;
     display: flex;
+    padding-left: 5%;
     flex-direction: column;
     top: 0;
     width: 100%;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
+    height: 125px;
+    background-color: rgb(68, 68, 68);
     z-index: 1000;
     white-space: nowrap;
 }
 
-.page-title{
-
-}
 
 .menu-icon {
     display: none;
-    padding-right: 5%;
 }
 
 .nav-links {
     list-style: none;
     display:  flex;
     flex-direction: row;
-    padding-right: 5%;
-}
-
-.nav-links li {
-    gap: 10px;
 }
 
 .nav-links a {
     color: rgb(0, 0, 0);
-    padding: 15px;
+    padding-right: 50px;
     font-size: 1rem;
+    margin-left: -35px;
 }
 /* END OF HEADER FORMATTING*/
 
 
-/* FORMATTING TEXT HEADER*/
-.page-header {
-    margin-top: 50px;
-    display: flex;
-    width: 100%;
-    background-color: rgb(87, 87, 87);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-}
-
-.page-header-text {
-    font-size: 5rem;
-    font-weight: bold;
-}
-/* END OF TEXT HEADER FORMATTING*/
-
-
 /* FORMATTING MAIN CONTENT */
 .main-content {
-    margin: 50px 15%;
+    margin: 150px 15%;
     font-size: 1.5em;
 }
 /* END OF MAIN CONTENT FORMATTING */
@@ -79,7 +53,7 @@ body {
 /* HANDLER FOR SMALLER SCREENS */
 @media only screen and (max-width: 1200px) {
     .main-content {
-        margin: 50px 5%;
+        margin: 150px 5%;
         font-size: 1.5em;
     }
 
@@ -92,7 +66,7 @@ body {
     }
 
     .main-content {
-        margin: 50px 10%;
+        margin: 150px 10%;
         font-size: 1.5em;
     }
 
@@ -100,14 +74,19 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 35px;
-        right: 0;
+        top: 110px;
+        left: 0;
         background-color: #333;
     }
 
     .nav-links li {
-        text-align: center;
         margin: 10px 0;
+    }
+    .nav-links a {
+        padding-left: 25px;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
     }
 
     .nav-links.active {
