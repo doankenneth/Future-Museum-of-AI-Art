@@ -8,7 +8,7 @@ body {
 }
 
 
-/* FORMATTING HEADER */
+/*====FORMATTING HEADER====*/
 .nav-header{
     position: fixed;
     display: flex;
@@ -21,7 +21,6 @@ body {
     z-index: 1000;
     white-space: nowrap;
 }
-
 
 .menu-icon {
     display: none;
@@ -49,17 +48,14 @@ body {
     color: rgb(0, 0, 0);
 }
 
-/* END OF HEADER FORMATTING*/
 
-
-/* FORMATTING MAIN CONTENT */
+/*====FORMATTING MAIN CONTENT====*/
 .main-content {
-    margin: 150px 15%;
+    margin: 125px 15%;
     font-size: 1.5em;
 }
-/* END OF MAIN CONTENT FORMATTING */
 
-/* FOOTER */
+/*====FOOTER====*/
 
 .footer{
     width: 100%;
@@ -79,7 +75,7 @@ body {
     color: #ffffff3b;
 }
 
-/* HANDLER FOR SMALLER SCREENS */
+/*====HANDLER FOR SMALLER SCREENS====*/
 @media only screen and (max-width: 1200px) {
     .main-content {
         margin: 150px 5%;

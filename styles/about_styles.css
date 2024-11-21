@@ -1,0 +1,54 @@
+hr {
+    margin: 100px 0;
+}
+
+.main-content {
+    margin: 125px 0;
+    font-size: 1.5em;
+}
+
+/*====FORMATTING TEXT HEADER====*/
+.page-header {
+    display: flex;
+    width: 100%;
+    background-color: rgb(97, 97, 97);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.page-header-text {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+/*====MISSION STATEMENT FORMAT====*/
+.mission-statement {
+    display: flex;
+    height: min(500px, 100%);
+    gap: 20px;
+    justify-content: center;
+}
+.left-box {
+    width: 100%;
+}
+.right-box {
+    width: 100%;
+}
+.text-container {
+    padding: 50px 50px;
+    margin: 5%;
+}
+
+/*====FOUNDER SECTION FORMAT====*/
+.founder {
+    display: flex;
+    margin: 125px 25%;
+    gap: 20px;
+    justify-content: center;
+}
+img {
+    max-height: 800px;
+}
+
