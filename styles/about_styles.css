@@ -4,11 +4,11 @@ hr {
 
 .main-content {
     margin: 125px 0;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 /*====FORMATTING TEXT HEADER====*/
-.page-header {
+.section-header {
     display: flex;
     width: 100%;
     background-color: rgb(97, 97, 97);
@@ -18,37 +18,84 @@ hr {
     height: 250px;
 }
 
-.page-header-text {
+.section-header-text {
     font-size: 5rem;
     font-weight: bold;
 }
 
+.page-header {
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.page-header-title {
+    position: absolute;
+    font-size: 5em;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /*====MISSION STATEMENT FORMAT====*/
-.mission-statement {
+.mission-statement, .history {
     display: flex;
     height: min(500px, 100%);
     gap: 20px;
     justify-content: center;
+    flex-direction: row;
 }
 .left-box {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .right-box {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .text-container {
     padding: 50px 50px;
     margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 /*====FOUNDER SECTION FORMAT====*/
 .founder {
     display: flex;
-    margin: 125px 25%;
+    margin: 125px 15%;
     gap: 20px;
     justify-content: center;
 }
 img {
-    max-height: 800px;
+    max-height: 600px;
+    object-position: center;
+    object-fit: cover;
 }
 
+@media only screen and (max-width: 768px) {
+    /*HANDLES DROP DOWN NAVIGATION FOR SMALLER SCREENS*/
+    .founder {
+        flex-direction: column;
+        gap: 0;
+    }
+    .history {
+        flex-direction: column;
+        gap: 0;
+    }
+    .mission-statement {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .main-content {
+        margin: 125px 0;
+        font-size: 1.75em;
+    }
+    
+
+}
