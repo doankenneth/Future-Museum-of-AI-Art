@@ -73,7 +73,7 @@ hr {
     justify-content: center;
 }
 img {
-    max-height: 600px;
+    max-height: 800px;
     object-position: center;
     object-fit: cover;
 }
