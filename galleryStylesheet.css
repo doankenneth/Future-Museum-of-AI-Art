@@ -71,29 +71,29 @@ body {
 	height: 85vh;
 	margin: 10px;
 	border-radius: 50px;
-	background: url(photos/Q5A0363.jpg);
+	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	transition: 0.5s;
 }
 .img-box:nth-child(1) {
-	background: url(photos/Q5A0363.jpg);
+	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(2) {
-	background: url(photos/Q5A0447.jpg);
+	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(3) {
-	background: url(photos/Q5A0416.jpg);
+	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(4) {
-	background: url(photos/Q5A0392.jpg);
+	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 }
