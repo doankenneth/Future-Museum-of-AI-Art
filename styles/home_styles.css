@@ -6,7 +6,7 @@ hr {
     text-align: left;
 }
 
-.logo {
-    height: 5 px;
-    width: 5 px;
+img.logo {
+    height: 10 px;
+    width: 10 px;
 }
