@@ -107,6 +107,7 @@ body {
 	position: absolute;
 	opacity: 0;
 	left: 30px;
+	right: 30px;
 	bottom: 15px;
 	color: #fff;
 	transition: bottom 0.5s, opacity 0.5s;
@@ -124,6 +125,10 @@ body {
 	opacity:1;
 }
 .img-box:active p {
+	opacity:1;
+	margin-top: 20px
+}
+.img-box:active h2 {
 	opacity:1;
 	margin-top: 20px
 }
@@ -170,4 +175,10 @@ body {
 	text-align: center;
 	font-family: manrope;
 	font-size: 35px;
+}
+h2 {
+	opacity: 0;
+	position: relative;
+	color: #ffffff;	
+	padding-top: 10px;
 }
