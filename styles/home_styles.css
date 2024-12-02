@@ -13,6 +13,8 @@ hr {
 
 .painting {
     height: 25%;
+    position: fixed;
+    right: 25px;
 }
 
 .banner {
