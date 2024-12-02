@@ -14,7 +14,8 @@ hr {
 
 .painting {
     height: 25%;
-    right: 25px;
+    top: 10px;
+    object-position: right;
 }
 
 .banner {
