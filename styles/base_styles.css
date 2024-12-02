@@ -6,52 +6,58 @@ body {
     width: 100%;
     font-size: 12px;
 }
-
+/*FONTS*/
+@font-face {
+	font-family: "manrope";
+	src: url("Manrope-Regular.ttf");
+}
+@font-face {
+	font-family: "lemon";
+	src: url("LEMONMILK-Regular.otf")
+}
 
 /*====FORMATTING HEADER====*/
-.nav-header{
-    position: fixed;
-    display: flex;
-    padding-left: 5%;
-    flex-direction: column;
-    top: 0;
-    width: 100%;
-    height: 125px;
-    background-color: rgb(68, 68, 68);
-    z-index: 1000;
-    white-space: nowrap;
+.nav-item {
+	font-size: 20px;
+	font-family: manrope;
+	margin-left: 1.5vw;
+	margin-top: 2vh;
 }
-
-.menu-icon {
-    display: none;
+.nav-link{
+	color: black;
 }
-
-.nav-links, .nav-links-footer {
-    list-style: none;
-    display:  flex;
-    flex-direction: row;
+i{
+	color: black;
+	margin-right: 1vw;
 }
-
-.nav-links a, .nav-links-footer a {
-    color: rgb(0, 0, 0);
-    padding-right: 50px;
-    font-size: 1rem;
-    margin-left: -35px;
-}
-
-.nav-links-footer {
-    margin-left: 0px;
-    padding-right: 0px;
+i:hover{
+	color: #1794fe;
 }
 
 .footer-nav a {
     color: rgb(0, 0, 0);
 }
-
+.logo {
+	margin-top: -5vh;
+	margin-left: 3vw;
+	color: black;
+	z-index: -1;
+}
+.logo a {
+	font-family: lemon;
+	color: inherit;
+	text-decoration: inherit;
+	font-size: 40px;
+}
+.logo a:hover {
+	color: #1794fe;
+}
+.logo p {
+	font-family: manrope;
+}
 
 /*====FORMATTING MAIN CONTENT====*/
 .main-content {
-    margin: 125px 15%;
     font-size: 2em;
 }
 
