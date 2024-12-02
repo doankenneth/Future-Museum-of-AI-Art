@@ -67,6 +67,7 @@ body {
 	position: relative;
 	transition: 0.5s;
 	overflow: hidden;
+	pointer: cursor;
 }
 .img-box img {
 	width: 100%;
