@@ -77,20 +77,20 @@ body {
 .img-box:nth-child(1) {
 	background: black;
 	background-size: cover;
-	background-position: left;
+	background-position: center;
 }
 .img-box:nth-child(2) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(3) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(4) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
@@ -99,7 +99,8 @@ body {
 	font-size: 1rem;
 	opacity: 0;
 	left: 30px;
-	bottom: 100px;
+	right: 30px;
+	bottom: 20px;
 	color: #fff;
 	transition: bottom 0.5s, opacity 0.5s;
 	font-family: manrope;
@@ -145,7 +146,7 @@ body {
 }
 .img-box:active img {
 	object-fit: contain;
-    width: 90%;
+    width: 40%;
     height: auto;
     margin-top: 100px;
 	margin-bottom: 10px;
