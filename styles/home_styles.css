@@ -79,7 +79,7 @@ i:hover{
 /*TEXT AT START*/
 .home {
 	font-size: 16;
-	color: #f3f3f3;
+	color: black;
 	position: absolute;
 	transform: translate(12vw, 45vh); 
 	font-family: manrope;
@@ -88,7 +88,7 @@ i:hover{
 /*TEXT AT END*/
 .end {
 	font-size: 16;
-	color: #f5f5f5;
+	color: black;
 	position: absolute;
 	transform: translate(65vw, 30vh); 
 	font-family: manrope;
