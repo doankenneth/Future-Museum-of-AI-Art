@@ -2,6 +2,11 @@ hr {
     margin: 100px 0;
 }
 
-main-content {
+.main-content {
     text-align: left;
+}
+
+img.logo {
+    height: 10px 0;
+    width: 10px 0;
 }
