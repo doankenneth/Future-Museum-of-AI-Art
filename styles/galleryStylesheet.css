@@ -23,6 +23,7 @@ body {
   width: 40vmin;
   position: absolute;
   transform: translate(-50%, -50%);
+  pointer: cursor;
 }
 .image[data-status="inactive"] {
   opacity: 0;
