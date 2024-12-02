@@ -27,7 +27,11 @@ hr {
 .button {
     font-size: 2rem;
 }
-
+img {
+    max-height: 800px;
+    object-position: center;
+    object-fit: cover;
+}
 @media only screen and (max-width: 768px) {
     /*HANDLES DROP DOWN NAVIGATION FOR SMALLER SCREENS*/
     .section-1 {
