@@ -1,44 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles/base_styles.css">
-    <link rel="stylesheet" href="styles/home_styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/147e53a236.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles/home_styles.css">
 </head>
 <body>
-    <div class="nav-header">
-        <h1 class="page-title">MUSEUM OF AI ART</h1>
-<!--             <img class="museum-logo" src="images/homepage/logo"> -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="supportus.html">Support Us</a></li>
-        </ul>
-        <h1 class="menu-icon" onclick="toggleMenu()">&#9776;</h1>
-    </div>
+	<div class="home">
+		<h1>Welcome to our Museum</h1>
+		<p>We hope you enjoy your stay</p>
+		<p style="color:#e5e5e5">Drag to explore the gallery!</p><br>
+	</div>
+	
+	<!--NAVBAR-->
+	<ul class="nav justify-content-end" style="z-index:-1;">
+		<li class="nav-item">
+			<a class="nav-link" href="about.html">About</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="gallery.html">Gallery</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="supportus.html" style="margin-right: 50px;">Support Us </a>
+		</li>
+	</ul>
+		
+	<!--LOGO ON TOP LEFT-->
+	<div class="logo">
+		<a href="index.html">MUSEUM OF AI</a>
+		<p>The interactive and speculative experience!</p>
+	</div>
+	
+	<div class="end">
+		<h1>Like our work?</h1>
+		<p style="font-size:16px;">Continue Exploring by learning about us!<br></p>
+			<a href="about.html">About Us</a> 
+	</div>
 
-    <div>
-        <div class="main-content">
-            <img class="painting" src="images/homepage/museum-painting">
-            <p style="margin-left: 50px">Welcome to our Museum of AI Art. We hope you enjoy your stay at our revolutionary, unqiue, and one-of-a-kind pieces. Do note that this museum was created not for the benefit of showcasing AI art but to spread awareness of the negative effects of AI. This work is ironic and satirical.</p>
-        </div>
-    </div>
-        
-    <div class="footer">
-        <div class="footer-text">
-            <img class="banner" src="images/homepage/banner">
-            <div class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="supportus.html">Support Us</a>
-            </div>
-            <p>Museum Of AI Art &#169;</p>
-        </div>
-    </div>
+	<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+
+	  <a draggable="false" > <img class="image" src="images/gallery/abstract/GlassEye.jpg" draggable="false" /></a>
+
+	  <a draggable="false" ><img class="image" src="images/gallery/abstract/AbstractArtOfAPerson.jpg" draggable="false" /></a>
+
+	  <a draggable="false" ><img class="image" src="images/gallery/abstract/Tableu3.jpg" draggable="false" /></a>
+	  
+	  <a draggable="false" ><img class="image" src="images/gallery/photography/CosmicPillar.png" draggable="false" /></a>
+	
+	  <a draggable="false" ><img class="image" src="images/gallery/photography/GoldenGateBridge.jpg" draggable="false" /></a>
+	
+	  <a draggable="false" ><img class="image" src="images/gallery/photography/FLAMINGONE.jpg" draggable="false" /></a>
+	
+	  <a draggable="false" ><img class="image" src="images/gallery/traditional/RoomOfGogh.jpg" draggable="false" /></a>
+	
+	  <a draggable="false" ><img class="image" src="images/gallery/traditional/TheMan.jpg" draggable="false" /></a>
+	</div>
+	
 </body>
-<script src="scripts/basescript.js"></script>
+<script>
+	const track = document.getElementById("image-track");
+
+	const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+	const handleOnUp = () => {
+	  track.dataset.mouseDownAt = "0";  
+	  track.dataset.prevPercentage = track.dataset.percentage;
+	}
+
+	const handleOnMove = e => {
+	  if(track.dataset.mouseDownAt === "0") return;
+	  
+	  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+			maxDelta = window.innerWidth / 2;
+	  
+	  const percentage = (mouseDelta / maxDelta) * -100,
+			nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+			nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+	  
+	  track.dataset.percentage = nextPercentage;
+	  
+	  track.animate({
+		transform: `translate(${nextPercentage}%, -50%)`
+	  }, { duration: 2200, fill: "forwards" });
+	  
+	  for(const image of track.getElementsByClassName("image")) {
+		image.animate({
+		  objectPosition: `${100 + nextPercentage}% center`
+		}, { duration: 2200, fill: "forwards" });
+	  }
+	}
+	window.onmousedown = e => handleOnDown(e);
+
+	window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+	window.onmouseup = e => handleOnUp(e);
+
+	window.ontouchend = e => handleOnUp(e.touches[0]);
+
+	window.onmousemove = e => handleOnMove(e);
+
+	window.ontouchmove = e => handleOnMove(e.touches[0]);
+</script>
 </html>
