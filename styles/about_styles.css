@@ -56,7 +56,7 @@ hr {
     justify-content: center;
 }
 .text-container {
-    padding: 50px 50px;
+    padding: 0 50px;
     margin: 5%;
     display: flex;
     justify-content: center;
