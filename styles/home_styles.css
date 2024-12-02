@@ -14,9 +14,9 @@ hr {
 }
 
 .painting {
-    height: 40%;
-    margin-top: 25px;
-    object-position: right;
+    height: 30%;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 .banner {
