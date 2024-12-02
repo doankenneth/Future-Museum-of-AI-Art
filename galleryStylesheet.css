@@ -71,16 +71,22 @@ body {
 	height: 85vh;
 	margin: 10px;
 	border-radius: 50px;
-	background: url(images/placeholder.png);
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	transition: 0.5s;
+	overflow: hidden;
 }
+.img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .img-box:nth-child(1) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
-	background-position: center;
+	background-position: left;
 }
 .img-box:nth-child(2) {
 	background: url(images/placeholder.png);
@@ -113,23 +119,38 @@ body {
 	background-color: black;
 	opacity: 0;
 }
-.img-box:hover {
-	width: 40vw;
-	img-bg: opacity: 1;
-	cursor: pointer;
-}
+
 .img-box:active img-bg {
 	opacity:1;
 }
 .img-box:active p {
 	opacity:1;
+	margin-top: 20px
 }
 .img-box:active {
 	width: 50vw;
-	height: 105vh;
+	height: 90vh;
 	border-radius: 0px;
 	left: 0px;
 	z-index: 1;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.img-box:active img {
+	object-fit: contain;
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+	margin-bottom: 10px;
+    transform: translateY(50%); 
+    animation: slideUp 0.5s forwards;
+}
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+    }
 }
 .menu-box {
 	position: relative;
