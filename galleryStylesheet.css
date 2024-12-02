@@ -1,7 +1,4 @@
-@font-face {
-	font-family: "manrope";
-	src: url("Manrope-Regular.ttf");
-}
+
 body {
 	background-color: #f5f5f5;
 	overflow-x: hidden;
@@ -43,7 +40,6 @@ body {
   transition: opacity 0.5s;
 }
 .category {
-	width: 100vw;
 	font-family: manrope;
 	font-size: 35px;
 	display: flex;
@@ -52,8 +48,6 @@ body {
 	margin-top: 50px;
 }
 .container {
-	width: 100vw;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -62,13 +56,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
-	height: 100vh;
-	margin-top: -50px;
 }
 .img-box {
 	width: 14vw;
-	height: 85vh;
+	height: 60vh;
 	margin: 10px;
 	border-radius: 50px;
 	background-size: cover;
@@ -86,29 +77,39 @@ body {
 .img-box:nth-child(1) {
 	background: black;
 	background-size: cover;
-	background-position: left;
+	background-position: center;
 }
 .img-box:nth-child(2) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(3) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
 .img-box:nth-child(4) {
-	background: url(images/placeholder.png);
+	background: black;
 	background-size: cover;
 	background-position: center;
 }
 .img-box p {
 	position: absolute;
+	font-size: 1rem;
 	opacity: 0;
 	left: 30px;
 	right: 30px;
-	bottom: 15px;
+	bottom: 20px;
+	color: #fff;
+	transition: bottom 0.5s, opacity 0.5s;
+	font-family: manrope;
+}
+.img-box h2 {
+	position: absolute;
+	font-size: 2rem;
+	opacity: 0;
+	top: 20px;
 	color: #fff;
 	transition: bottom 0.5s, opacity 0.5s;
 	font-family: manrope;
@@ -116,7 +117,7 @@ body {
 .img-bg {
 	position:absolute;
 	width: 200vw;
-	height: 200vh;
+	height: 60vh;
 	background-color: black;
 	opacity: 0;
 }
@@ -134,7 +135,7 @@ body {
 }
 .img-box:active {
 	width: 50vw;
-	height: 90vh;
+	height: 60vh;
 	border-radius: 0px;
 	left: 0px;
 	z-index: 1;
@@ -145,9 +146,9 @@ body {
 }
 .img-box:active img {
 	object-fit: contain;
-    width: 90%;
+    width: 40%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 100px;
 	margin-bottom: 10px;
     transform: translateY(50%); 
     animation: slideUp 0.5s forwards;
@@ -176,9 +177,8 @@ body {
 	font-family: manrope;
 	font-size: 35px;
 }
-h2 {
-	opacity: 0;
-	position: relative;
-	color: #ffffff;	
-	padding-top: 10px;
+/*====FORMATTING MAIN CONTENT====*/
+.main-content {
+    margin: 125px 15%;
+    font-size: 1em;
 }
