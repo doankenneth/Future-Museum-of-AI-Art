@@ -67,7 +67,9 @@ hr {
 
 /*====FOUNDER SECTION FORMAT====*/
 .founder {
+    display: flex;
     margin: 125px 15%;
+    gap: 20px;
     justify-content: center;
 }
 img {
