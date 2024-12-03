@@ -60,7 +60,17 @@ i:hover{
 .main-content {
     font-size: 2em;
 }
-
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+.menu-icon {
+    display: none;
+}
 /*====FOOTER====*/
 
 .footer{
@@ -95,27 +105,37 @@ i:hover{
     /*HANDLES DROP DOWN NAVIGATION FOR SMALLER SCREENS*/
     .menu-icon {
         display: grid;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 
     .main-content {
         margin: 150px 10%;
         font-size: 1.5em;
     }
+    .nav-item {
+        display: none;
+    }
 
     .nav-links {
         display: none;
         flex-direction: column;
+        width: 100%;
         position: absolute;
-        top: 110px;
-        left: 0;
-        background-color: #333;
+        justify-content: center;
+        align-items: center;
+        top: 90px;
+        border: solid;
+        z-index: 100;
     }
 
     .nav-links li {
         margin: 10px 0;
+
+        list-style: none;
     }
     .nav-links a {
-        padding-left: 25px;
         width: 100%;
         color: rgb(0, 0, 0);
         font-size: 1rem;
